@@ -1,0 +1,19 @@
+﻿@model BlogProject.Models.HomePageModel
+
+@section Styles {
+}
+
+@foreach (var post in Model.Posts)
+{
+    <div class="jumbotron">
+        <div class="info-block">
+            <span class="publisher">@post.Writer</span>
+            <span class="publish-date">@post.PublishedAt</span>
+        </div>
+        <h1 class="display-3">@post.Title</h1>
+        <p class="lead">@post.Description</p>
+    </div>   
+}
+
+@section Scripts {
+}
